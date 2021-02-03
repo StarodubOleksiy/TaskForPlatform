@@ -10,7 +10,7 @@ import ru.yandex.qatools.allure.annotations.Description;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.TestCaseId;
 
-public class SeleniumSortingListOfOldestBuildingsTest extends BaseTest {
+public class SeleniumSortingListOfTallestBuildingsTest extends BaseTest {
 
 
     @TestCaseId("TC_Signup_001")
