@@ -72,18 +72,22 @@ public class ListOfTallestBuildings extends PageFactoryInitializer {
         return this;
     }
 
-    private boolean checkDataInColumnSortedDescendingOrder(WebElement firstColumnElement, WebElement secondColumnElement) {
+    private boolean checkDataInColumnSortedAscendingOrder(WebElement firstColumnElement, WebElement secondColumnElement) {
         if (firstColumnElement.getText().compareTo(secondColumnElement.getText()) == -1)
             return true;
         else return false;
     }
 
     public boolean checkCitiesInTableSortedAscendingOrder() {
-        return checkDataInColumnSortedDescendingOrder(cityCellInFirstRow, cityCellInSecondRow);
+        System.out.println("cityCellInFirstRow.getText() = "+cityCellInFirstRow.getText());
+        System.out.println("cityCellInSecondRow.getText() = "+cityCellInSecondRow.getText());
+        return checkDataInColumnSortedAscendingOrder(cityCellInFirstRow, cityCellInSecondRow);
     }
 
     public boolean checkRankInTableSortedAscendingOrder() {
-        return checkDataInColumnSortedDescendingOrder(rankCellInFirstRow, rankCellInSecondRow);
+        System.out.println("rankCellInFirstRow.getText() = "+rankCellInFirstRow.getText());
+        System.out.println("rankCellInSecondRow.getText() = "+rankCellInSecondRow.getText());
+        return checkDataInColumnSortedAscendingOrder(rankCellInFirstRow, rankCellInSecondRow);
     }
 
 
