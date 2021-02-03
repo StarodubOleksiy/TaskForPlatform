@@ -10,7 +10,7 @@ import ru.yandex.qatools.allure.annotations.Description;
 import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.TestCaseId;
 
-public class SeleniumCreateOffice365AdminTest extends BaseTest {
+public class SeleniumSortingListOfOldestBuildingsTest extends BaseTest {
 
 
     @TestCaseId("TC_Signup_001")
@@ -20,16 +20,16 @@ public class SeleniumCreateOffice365AdminTest extends BaseTest {
     public void test1() {
         ListOfTallestBuildings()
                 .sortingInOrderByRank(SortingOrder.Up);//1
-        Assert.assertTrue(ListOfTallestBuildings().checkRankInTableSortedDescendingOrder());
+        Assert.assertTrue(ListOfTallestBuildings().checkRankInTableSortedAscendingOrder());
         ListOfTallestBuildings()
                 .sortingInOrderByRank(SortingOrder.Down);//74
-        Assert.assertFalse(ListOfTallestBuildings().checkRankInTableSortedDescendingOrder());
+        Assert.assertFalse(ListOfTallestBuildings().checkRankInTableSortedAscendingOrder());
         ListOfTallestBuildings()
                 .sortingInOrderByCity(SortingOrder.Up); //Abu Dhabi
-        Assert.assertTrue(ListOfTallestBuildings().checkCitiesInTableSortedDescendingOrder());
+        Assert.assertTrue(ListOfTallestBuildings().checkCitiesInTableSortedAscendingOrder());
         ListOfTallestBuildings()
                 .sortingInOrderByCity(SortingOrder.Down); //Xi'an
-        Assert.assertFalse(ListOfTallestBuildings().checkCitiesInTableSortedDescendingOrder());
+        Assert.assertFalse(ListOfTallestBuildings().checkCitiesInTableSortedAscendingOrder());
     }
 
 

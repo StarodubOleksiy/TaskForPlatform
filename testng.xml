@@ -7,7 +7,7 @@
 	<test name="SeleniumTestCheckIfPossibleCreateOffice365Admin">
 
 		<classes>
-			<class name="tests.SeleniumCreateOffice365AdminTest" />
+			<class name="tests.SeleniumSortingListOfOldestBuildingsTest" />
 			</classes>
 	</test> <!-- Test -->
 

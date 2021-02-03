@@ -78,11 +78,11 @@ public class ListOfTallestBuildings extends PageFactoryInitializer {
         else return false;
     }
 
-    public boolean checkCitiesInTableSortedDescendingOrder() {
+    public boolean checkCitiesInTableSortedAscendingOrder() {
         return checkDataInColumnSortedDescendingOrder(cityCellInFirstRow, cityCellInSecondRow);
     }
 
-    public boolean checkRankInTableSortedDescendingOrder() {
+    public boolean checkRankInTableSortedAscendingOrder() {
         return checkDataInColumnSortedDescendingOrder(rankCellInFirstRow, rankCellInSecondRow);
     }
 
