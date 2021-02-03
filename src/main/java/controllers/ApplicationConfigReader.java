@@ -36,19 +36,6 @@ public class ApplicationConfigReader
 	@Property(value="VideoFeature")
 	private String VideoFeature;
 
-	@Property(value = "login")
-	private String login;
-
-	@Property(value = "password")
-	private String password;
-
-	public String getLogin() {
-		return login;
-	}
-
-	public String getPassword() {
-		return password;
-	}
 
 	public String getBrowser() {
         String envBrowser = System.getenv("STE_BROWSER");
@@ -76,7 +63,6 @@ public class ApplicationConfigReader
             return url;
         }
 	}
-
 
 	public String getChromeVersionDriver() {
 		return ChromeVersionDriver;

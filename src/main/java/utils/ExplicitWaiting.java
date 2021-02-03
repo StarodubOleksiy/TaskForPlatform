@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ExplicitWaiting extends BaseMethod {
 
+	protected static WebDriverWait wait;
+
 	
 	/** To Wait Until Element to be Selectable */
 	public static void explicitWaitElementToBeSelected(WebElement element, int time) {

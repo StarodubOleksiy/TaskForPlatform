@@ -6,7 +6,7 @@ package pageObjects.initializePageObjects;
 import org.openqa.selenium.support.PageFactory;
 
 import controllers.BaseMethod;
-import pageObjects.pages.Office365AdminPage;
+import pageObjects.pages.ListOfTallestBuildings;
 
 
 /**
@@ -14,7 +14,7 @@ import pageObjects.pages.Office365AdminPage;
  */
 public class PageFactoryInitializer extends BaseMethod {
 
-    public Office365AdminPage Office365AdminPage() {
-        return PageFactory.initElements(getWebDriver(), Office365AdminPage.class);
+    public ListOfTallestBuildings ListOfTallestBuildings() {
+        return PageFactory.initElements(getWebDriver(), ListOfTallestBuildings.class);
     }
 }
