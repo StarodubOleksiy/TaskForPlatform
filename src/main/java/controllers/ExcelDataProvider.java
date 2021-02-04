@@ -11,8 +11,10 @@ import org.testng.annotations.DataProvider;
 import utils.ExcelUtils;
 
 /**
- * @date Aug 18, 2018
+ * author Oleksiy Starodub
+ * @date February 04, 2021
  */
+
 public class ExcelDataProvider extends InitMethod
 {
 	@DataProvider(name="multiSheetExcelRead", parallel=true)

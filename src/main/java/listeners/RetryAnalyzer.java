@@ -3,6 +3,11 @@ package listeners;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
+/**
+ * author Oleksiy Starodub
+ * @date February 04, 2021
+ */
+
 public class RetryAnalyzer implements IRetryAnalyzer {
 
     private int count = 0;

@@ -64,7 +64,7 @@ public class ListOfTallestBuildings extends PageFactoryInitializer {
     }
 
 
-    @Step("Sorting data into tables in a certain order{0} {1}")
+    @Step("Sorting data into tables in a certain order {0} {1}")
     private ListOfTallestBuildings sortingColumnInOrder(WebElement element, SortingOrder order) {
         scrollIntoView(element);
         while (!element.getAttribute("class").contains(order.getOrder()))
@@ -72,21 +72,20 @@ public class ListOfTallestBuildings extends PageFactoryInitializer {
         return this;
     }
 
+    @Step("Compare to elements by their text {0} {1}")
     private boolean checkDataInColumnSortedAscendingOrder(WebElement firstColumnElement, WebElement secondColumnElement) {
         if (firstColumnElement.getText().compareTo(secondColumnElement.getText()) == -1)
             return true;
         else return false;
     }
 
+    @Step("Check if data in the city column of the table is in ascending order")
     public boolean checkCitiesInTableSortedAscendingOrder() {
-        System.out.println("cityCellInFirstRow.getText() = "+cityCellInFirstRow.getText());
-        System.out.println("cityCellInSecondRow.getText() = "+cityCellInSecondRow.getText());
-        return checkDataInColumnSortedAscendingOrder(cityCellInFirstRow, cityCellInSecondRow);
+         return checkDataInColumnSortedAscendingOrder(cityCellInFirstRow, cityCellInSecondRow);
     }
 
+    @Step("Check if data in the rank column of the table is in ascending order")
     public boolean checkRankInTableSortedAscendingOrder() {
-        System.out.println("rankCellInFirstRow.getText() = "+rankCellInFirstRow.getText());
-        System.out.println("rankCellInSecondRow.getText() = "+rankCellInSecondRow.getText());
         return checkDataInColumnSortedAscendingOrder(rankCellInFirstRow, rankCellInSecondRow);
     }
 

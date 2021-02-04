@@ -14,7 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
 /**
- * @date Aug 18, 2018
+ * author Oleksiy Starodub
+ * @date February 04, 2021
  */
 
 public class FluentWaiting extends BaseMethod

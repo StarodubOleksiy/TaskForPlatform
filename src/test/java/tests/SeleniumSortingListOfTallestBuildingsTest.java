@@ -13,33 +13,33 @@ import ru.yandex.qatools.allure.annotations.TestCaseId;
 public class SeleniumSortingListOfTallestBuildingsTest extends BaseTest {
 
 
-    @TestCaseId("TC_Signup_001")
-    @Description("Verify incorrect login signup to Stone Edge Trading application")
-    @Features("Stone Edge Trading signup page")
+    @TestCaseId("TC_List_of_tallest_buildings_001")
+    @Description("Verify sorting functionality for two columns (Rank and City) which are in the uppermost table ")
+    @Features("https://en.wikipedia.org/wiki/List_of_tallest_buildings")
     @Test
-    public void test1() {
+    public void test1VerifySortingFunctionalityForColumnsRankAndCity() {
         ListOfTallestBuildings()
-                .sortingInOrderByRank(SortingOrder.Up);//1
-        Assert.assertTrue(ListOfTallestBuildings().checkRankInTableSortedAscendingOrder());
+                .sortingInOrderByRank(SortingOrder.Up);//Click on the top cell of column to sort ranks in ascending order
+        Assert.assertTrue(ListOfTallestBuildings().checkRankInTableSortedAscendingOrder());//Verify if column rank is sorted in ascending order
         ListOfTallestBuildings()
-                .sortingInOrderByRank(SortingOrder.Down);//74
-        Assert.assertFalse(ListOfTallestBuildings().checkRankInTableSortedAscendingOrder());
+                .sortingInOrderByRank(SortingOrder.Down);//Click on the top cell of column to sort ranks in descending order
+        Assert.assertFalse(ListOfTallestBuildings().checkRankInTableSortedAscendingOrder());;//Verify if column rank is sorted in descending order
         ListOfTallestBuildings()
-                .sortingInOrderByCity(SortingOrder.Up); //Abu Dhabi
-        Assert.assertTrue(ListOfTallestBuildings().checkCitiesInTableSortedAscendingOrder());
+                .sortingInOrderByCity(SortingOrder.Up); //Click on the top cell of column to sort cities in ascending order
+        Assert.assertTrue(ListOfTallestBuildings().checkCitiesInTableSortedAscendingOrder());//Verify if column city is sorted in ascending order
         ListOfTallestBuildings()
-                .sortingInOrderByCity(SortingOrder.Down); //Xi'an
-        Assert.assertFalse(ListOfTallestBuildings().checkCitiesInTableSortedAscendingOrder());
+                .sortingInOrderByCity(SortingOrder.Down); //Click on the top cell of column to sort cities in descending order
+        Assert.assertFalse(ListOfTallestBuildings().checkCitiesInTableSortedAscendingOrder());//Verify if column city is sorted in descending order
     }
 
 
-    @TestCaseId("TC_Signup_001")
-    @Description("Verify incorrect login signup to Stone Edge Trading application")
-    @Features("Stone Edge Trading signup page")
+    @TestCaseId("TC_List_of_tallest_buildings_002")
+    @Description("Verify the oldest building in this table is Empire State Building which was built in 1931 year")
+    @Features("https://en.wikipedia.org/wiki/List_of_tallest_buildings")
     @Test
-    public void test2() {
+    public void testVerifyTheOldestBuildingIsEmpireStateBuilding() {
         ListOfTallestBuildings()
-                .sortingInOrderByYear(SortingOrder.Up)
-                .verifyOldestBuilding("Empire State Building", "1931");
+                .sortingInOrderByYear(SortingOrder.Up)//Click on the top cell of column to sort years in ascending order
+                .verifyOldestBuilding("Empire State Building", "1931");//Verify the oldest building is Empire State Building which was built in 1931
     }
 }

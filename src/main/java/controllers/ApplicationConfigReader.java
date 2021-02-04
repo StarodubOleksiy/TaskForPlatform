@@ -9,6 +9,12 @@ import ru.qatools.properties.PropertyLoader;
 import ru.qatools.properties.Resource;
 import java.util.Arrays;
 
+/**
+ * author Oleksiy Starodub
+ * @date February 04, 2021
+ */
+
+
 @Resource.Classpath("ApplicationConfig.properties")
 public class ApplicationConfigReader 
 {

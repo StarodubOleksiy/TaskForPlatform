@@ -14,6 +14,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import controllers.BaseMethod;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * author Oleksiy Starodub
+ * @date February 04, 2021
+ */
 
 public class ExplicitWaiting extends BaseMethod {
 

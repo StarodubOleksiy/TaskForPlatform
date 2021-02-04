@@ -12,8 +12,10 @@ import org.testng.ITestResult;
 import org.testng.asserts.SoftAssert;
 
 /**
- * @date Aug 18, 2018
+ * author Oleksiy Starodub
+ * @date February 04, 2021
  */
+
 public class InitMethod 
 {
 	public static ApplicationConfigReader appConfig = new ApplicationConfigReader();

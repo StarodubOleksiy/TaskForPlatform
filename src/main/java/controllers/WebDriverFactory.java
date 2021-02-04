@@ -15,8 +15,10 @@ import com.automation.remarks.video.enums.VideoSaveMode;
 import com.automation.remarks.video.recorder.VideoRecorder;
 
 /**
- * @date Aug 18, 2018
+ * author Oleksiy Starodub
+ * @date February 04, 2021
  */
+
 public class WebDriverFactory extends BrowserFactory
 {
 	public static WebDriver wd;

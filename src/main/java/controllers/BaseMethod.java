@@ -23,6 +23,11 @@ import org.testng.annotations.AfterTest;
 
 import ru.yandex.qatools.allure.annotations.Step;
 
+/**
+ * author Oleksiy Starodub
+ * @date February 04, 2021
+ */
+
 public class BaseMethod extends WebDriverFactory {
     /* To get the Website Name */
     public String getUrlTitle() throws Exception {

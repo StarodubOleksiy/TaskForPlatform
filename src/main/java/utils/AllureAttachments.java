@@ -17,8 +17,10 @@ import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 /**
- * @date Aug 18, 2018
+ * author Oleksiy Starodub
+ * @date February 04, 2021
  */
+
 public class AllureAttachments {
     /**
      * To Attach the Entire Page Screenshot
