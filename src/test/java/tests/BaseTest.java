@@ -2,9 +2,7 @@ package tests;
 
 import controllers.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import pageObjects.initializePageObjects.PageFactoryInitializer;
 
 public class BaseTest extends PageFactoryInitializer {
@@ -14,8 +12,8 @@ public class BaseTest extends PageFactoryInitializer {
         detectBrowser(); //Detect browser which you are going to use
     }
 
-    @BeforeMethod
-    public void beforeMethod() throws Exception
+    @BeforeClass
+    public void beforeClass() throws Exception
     {
         System.out.println("Browser: "+Browser);
         System.out.println("WebsiteURL: "+WebsiteURL);
@@ -33,8 +31,8 @@ public class BaseTest extends PageFactoryInitializer {
         }
     }
 
-    @AfterMethod(alwaysRun=true,enabled=true)
-    public void afterMethod() throws Exception
+    @AfterClass(alwaysRun=true,enabled=true)
+    public void afterClass() throws Exception
     {
         Thread.sleep(2000);
         getWebDriver().quit();//Exit the driver which you have created

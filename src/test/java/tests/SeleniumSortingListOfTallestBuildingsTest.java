@@ -37,7 +37,7 @@ public class SeleniumSortingListOfTallestBuildingsTest extends BaseTest {
     @Description("Verify the oldest building in this table is Empire State Building which was built in 1931 year")
     @Features("https://en.wikipedia.org/wiki/List_of_tallest_buildings")
     @Test
-    public void testVerifyTheOldestBuildingIsEmpireStateBuilding() {
+    public void test2VerifyTheOldestBuildingIsEmpireStateBuilding() {
         ListOfTallestBuildings()
                 .sortingInOrderByYear(SortingOrder.Up)//Click on the top cell of column to sort years in ascending order
                 .verifyOldestBuilding("Empire State Building", "1931");//Verify the oldest building is Empire State Building which was built in 1931

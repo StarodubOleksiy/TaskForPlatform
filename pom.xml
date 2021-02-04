@@ -254,27 +254,6 @@
 
 	</dependencies>
 
-	<profiles>
-		<profile>
-			<id>release-sign-artifacts</id>
-			<build>
-				<plugins>
-					<!-- This plugin signs all of the project's attached artifacts with 
-						GnuPG -->
-
-
-					<!-- The Javadoc Plugin uses the Javadoc tool to generate javadocs for 
-						the specified project -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.10.4</version>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
 	<build>
 		<plugins>
 			<!-- Apache Maven SureFire Plugin -->
